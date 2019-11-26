@@ -3,25 +3,30 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" href="style.css">
-<script src="jj.js">
-
-</script>
-
 <style>
 * {
   box-sizing: border-box;
-}
 
-/* Create four equal columns that floats next to each other */
+}
+.cell{
+  position: relative;
+  width: 790px;
+  height: 890px;
+  background-color: grey;
+  margin: 70px;
+  border: 60px;
+  border-color: grey;
+  border-style: solid;
+
+}
 .column {
   float: left;
   width: 20%;
   padding: 10px;
-  height: 100px; /* Should be removed. Only for demonstration */
+  height: 120px;
 }
 
-/* Clear floats after the columns */
+
 .row:after {
   content: "";
   display: table;
@@ -38,227 +43,401 @@ h2 {
 <body>
 
 <h2 >Snake and Ladder</h2>
-<div class="boards">
 
-  <div class="row">
-    <div class="column" style="background-color:#aaa;">
-      <h2>21</h2>
-      <p class="positionP1"></p>
-      <p class="positionP2"></p>
-
-    </div>
-    <div class="column" style="background-color:#ccc;">
-      <h2>22</h2>
-      <p class="positionP1"></p>
-      <p class="positionP2"></p>
-
-    </div>
-
-    <div class="column" style="background-color:#FA5667;">
-      <h2>23</h2>
-      <p>Snake! Back to 16</p>
-      <p class="positionP1"></p>
-      <p class="positionP2"></p>
-
-    </div>
-    <div class="column" style="background-color:#ccc;">
-      <h2>24</h2>
-      <p class="positionP1"></p>
-      <p class="positionP2"></p>
-
-    </div>
-    <div class="column" style="background-color:#56FA8F;">
-      <h2>25</h2>
-      <p>FINISH !!</p>
-      <p class="positionP1"></p>
-      <p class="positionP2"></p>
-
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="column" style="background-color:#ccc;">
-      <h2>20</h2>
-      <p class="positionP1"></p>
-      <p class="positionP2"></p>
-
-    </div>
-    <div class="column" style="background-color:#A3BCF0;">
-      <h2>19</h2>
-      <p>LADDER to 24</p>
-      <p class="positionP1"></p>
-      <p class="positionP2"></p>
-
-    </div>
-    <div class="column" style="background-color:#ccc;">
-      <h2>18</h2>
-      <p class="positionP1"></p>
-      <p class="positionP2"></p>
-
-    </div>
-    <div class="column" style="background-color:#aaa;">
-      <h2>17</h2>
-      <p class="positionP1"></p>
-      <p class="positionP2"></p>
-
-    </div>
-    <div class="column" style="background-color:#ccc;">
-      <h2>16</h2>
-      <p class="positionP1"></p>
-      <p class="positionP2"></p>
-
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="column" style="background-color:#aaa;">
-      <h2>11</h2>
-      <p class="positionP1"></p>
-      <p class="positionP2"></p>
-
-    </div>
-    <div class="column" style="background-color:#ccc;">
-      <h2>12</h2>
-      <p class="positionP1"></p>
-      <p class="positionP2"></p>
-
-    </div>
-    <div class="column" style="background-color:#aaa;">
-      <h2>13</h2>
-      <p class="positionP1"></p>
-      <p class="positionP2"></p>
-
-    </div>
-    <div class="column" style="background-color:#ccc;">
-      <h2>14</h2>
-      <p class="positionP1"></p>
-      <p class="positionP2"></p>
-
-    </div>
-    <div class="column" style="background-color:#FA5667;">
-      <h2>15</h2>
-      <p>Snake! Back to 5.</p>
-      <p class="positionP1"></p>
-      <p class="positionP2"></p>
-
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="column" style="background-color:#ccc;">
-      <h2>10</h2>
-      <p class="positionP1"></p>
-      <p class="positionP2"></p>
-
-    </div>
-    <div class="column" style="background-color:#aaa;">
-      <h2>9</h2>
-      <p class="positionP1"></p>
-      <p class="positionP2"></p>
-
-    </div>
-    <div class="column" style="background-color:#A3BCF0;">
-      <h2>8</h2>
-      <p>LADDER to 14.</p>
-      <p class="positionP1"></p>
-      <p class="positionP2"></p>
-
-    </div>
-    <div class="column" style="background-color:#aaa;">
-      <h2>7</h2>
-      <p class="positionP1"></p>
-      <p class="positionP2"></p>
-
-    </div>
-    <div class="column" style="background-color:#ccc;">
-      <h2>6</h2>
-      <p class="positionP1"></p>
-      <p class="positionP2"></p>
-
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="column" style="background-color:#aaa;">
-      <h2>1</h2>
-      <p class="positionP1" ></p>
-      <p class="positionP2"></p>
-
-    </div>
-    <div class="column" style="background-color:#ccc;">
-      <h2>2</h2>
-      <p class="positionP1"></p>
-      <p class="positionP2"></p>
+<div class="cell">
 
 
-    </div>
-    <div class="column" style="background-color:#aaa;">
-      <h2>3</h2>
-      <p class="positionP1"></p>
-      <p class="positionP2"></p>
-
-    </div>
-    <div class="column" style="background-color:#ccc;">
-      <h2>4</h2>
-      <p class="positionP1"></p>
-      <p class="positionP2"></p>
-
-    </div>
-    <div class="column" style="background-color:#aaa;">
-      <h2>5</h2>
-      <p class="positionP1"></p>
-      <p class="positionP2"></p>
-
-    </div>
-  </div><br>
-
-
-
-
-
-<p></p>
-
-  <div class="container-dice">
-    <div class="block-container">
-    <button type="button" onclick="rollDice();" class="btn btn-primary">player 1</button>
-    </div>
-    <div class="box-dice1">
-
-    <!--<div id="dice"></div>-->
-      <img id="dice" class="dice" src="https://openclipart.org/download/282127/Die/1.svg">
-    </div>
-
-
-    <div class="block-container2">
-    <button type="button" onclick="rollDice2();" class="btn btn-primary2">player 2</button>
-    </div>
-    <div class="box-dice2">
-
-    <!--<div id="dice"></div>-->
-      <img id="dice2" class="dice2" src="https://openclipart.org/download/282127/Die/1.svg">
-    </div>
-  </div>
-
-  <div class="" id="display1">
-    player 1 got
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <h2>21</h2>
+    <p id="21positionP1"></p>
+    <p id="21positionP2"></p>
 
   </div>
+  <div class="column" style="background-color:#ccc;">
+    <h2>22</h2>
+    <p id="22positionP1"></p>
+    <p id="22positionP2"></p>
+
+  </div>
+
+  <div class="column" style="background-color:#aaa;">
+    <h2 style="color:brown">23</h2>
+
+    <p id="23positionP1"></p>
+    <p id="23positionP2"></p>
+
+  </div>
+  <div class="column" style="background-color:#ccc;">
+    <h2>24</h2>
+    <p id="24positionP1"></p>
+    <p id="24positionP2"></p>
+
+  </div>
+  <div class="column" style="background-color:#aaa;">
+    <h2 style="color:green">25</h2>
+    <p id="25positionP1"></p>
+    <p id="25positionP2"></p>
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="column" style="background-color:#ccc;">
+    <h2>20</h2>
+    <p id="20positionP1"></p>
+    <p id="20positionP2"></p>
+
+  </div>
+  <div class="column" style="background-color:#aaa;">
+    <h2 style="color:cyan">19</h2>
+
+    <p id="19positionP1"></p>
+    <p id="19positionP2"></p>
+
+  </div>
+
+  <div class="column" style="background-color:#ccc;">
+    <h2>18</h2>
+    <p id="18positionP1"></p>
+    <p id="18positionP2"></p>
+
+  </div>
+  <div class="column" style="background-color:#aaa;">
+    <h2>17</h2>
+    <p id="17positionP1"></p>
+    <p id="17positionP2"></p>
+
+  </div>
+
+  <div class="column" style="background-color:#ccc;">
+    <h2>16</h2>
+    <p id="16positionP1"></p>
+    <p id="16positionP2"></p>
+
+  </div>
+
+</div>
+
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <h2>11</h2>
+    <p id="11positionP1"></p>
+    <p id="11positionP2"></p>
+
+  </div>
+  <div class="column" style="background-color:#ccc;">
+    <h2>12</h2>
+    <p id="12positionP1"></p>
+    <p id="12positionP2"></p>
+
+  </div>
+  <div class="column" style="background-color:#aaa;">
+    <h2>13</h2>
+    <p id="13positionP1"></p>
+    <p id="13positionP2"></p>
+
+  </div>
+  <div class="column" style="background-color:#ccc;">
+    <h2>14</h2>
+    <p id="14positionP1"></p>
+    <p id="14positionP2"></p>
+
+  </div>
+  <div class="column" style="background-color:#aaa;">
+    <h2 style="color:brown">15</h2>
+
+    <p id="15positionP1"></p>
+    <p id="15positionP2"></p>
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="column" style="background-color:#ccc;">
+    <h2>10</h2>
+    <p id="10positionP1"></p>
+    <p id="10positionP2"></p>
+
+  </div>
+  <div class="column" style="background-color:#aaa;">
+    <h2>9</h2>
+    <p id="9positionP1"></p>
+    <p id="9positionP2"></p>
+
+  </div>
+
+  <div class="column" style="background-color:#ccc;">
+    <h2 style="color:cyan">8</h2>
+
+    <p id="8positionP1"></p>
+    <p id="8positionP2"></p>
+
+  </div>
+
+
+  <div class="column" style="background-color:#aaa;">
+    <h2>7</h2>
+    <p id="7positionP1"></p>
+    <p id="7positionP2"></p>
+
+  </div>
+  <div class="column" style="background-color:#ccc;">
+    <h2>6</h2>
+    <p id="6positionP1"></p>
+    <p id="6positionP2"></p>
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <h2>1</h2>
+    <p id ="1positionP1" ></p>
+    <p id="1positionP2"></p>
+
+  </div>
+  <div class="column" style="background-color:#ccc;">
+    <h2>2</h2>
+    <p id="2positionP1"></p>
+    <p id="2positionP2"></p>
+
+  </div>
+  <div class="column" style="background-color:#aaa;">
+    <h2>3</h2>
+    <p id="3positionP1"></p>
+    <p id="3positionP2"></p>
+
+  </div>
+  <div class="column" style="background-color:#ccc;">
+    <h2>4</h2>
+    <p id="4positionP1"></p>
+    <p id="4positionP2"></p>
+
+  </div>
+  <div class="column" style="background-color:#aaa;">
+    <h2>5</h2>
+    <p id="5positionP1"></p>
+    <p id="5positionP2"></p>
+
+  </div>
+</div><br>
+
+
+<div class="resultP1">
+      <label for="Dice1result">P1 </label><p class ="display1" > </p>
+      <input type="submit" value="Roll dice" class="rollDice1">
+    </div>
 <br>
-<div class="" id="displaycurrent1">
-  player 1 position =
+
+    <div class="resultP2">
+          <label for="Dice2result">P2 </label><p class ="display2" > </p>
+
+          <input type="submit" value="Roll dice" class="rollDice2">
+        </div>
 
 </div>
-<div class="" id="display2">
-  player 2 got
-
-</div>
-<br>
-<div class="" id="displaycurrent2">
-player 2 position =
-
-</div>
-</div>
-
 </body>
+
+<script>
+
+  const position1 = document.querySelector('.position1');
+  const position2 = document.querySelector('.position2');
+  const rollDice1 = document.querySelector('.rollDice1');
+  const rollDice2 = document.querySelector('.rollDice2');
+  const display1 = document.querySelector('.display1');
+  const display2 = document.querySelector('.display2');
+
+  var box = [];
+  let reset = 1;
+  let pos1 = 0;
+  let pos2 = 0;
+
+  rollDice1.addEventListener('click', player1);
+
+function player1(){
+
+
+
+       let rolldice = Math.floor(Math.random() * 6) + 1;
+
+       if (reset == 0) {
+         console.clear();
+         display1.innerHTML = " ";
+         display1.style.backgroundColor = '';
+         display2.innerHTML = " ";
+         display2.style.backgroundColor = '';
+         reset = 1;
+       }
+
+      if(pos1 === 0 && reset===1){
+       display1.textContent = 'Player 1 rolled ' + rolldice;
+       pos1 += rolldice;
+       box[pos1] = 'P1' ;
+
+
+       document.getElementById(pos1+"positionP1").innerHTML = box[pos1];
+     }
+
+     else{
+       display1.textContent = 'Player 1 rolled ' +rolldice;
+       document.getElementById(pos1+"positionP1").innerHTML = '';
+       pos1 += rolldice;
+
+       if(pos1>25){
+        pos1 -= 25;
+
+       }
+      box[pos1] = 'P1';
+      document.getElementById(pos1+"positionP1").innerHTML = box[pos1];
+
+
+
+      if(pos1 === 25){
+
+      display1.textContent = 'Congratulations! You win!';
+      display1.style.backgroundColor = 'green';
+      display2.textContent = 'Sorry! You lose!';
+      display2.style.backgroundColor = 'red';
+      pos1=0;
+      reset=0;
+    }
+
+     if (pos1 == 15) {
+      display1.textContent = "Yikes! You stepped on a snake! Go down to position 5." ;
+      document.getElementById(pos1+"positionP1").innerHTML = '';
+      pos1 = 5;
+      box[pos1] = 'P1';
+      document.getElementById(pos1+"positionP1").innerHTML = box[pos1];
+
+    }
+
+     if (pos1 == 23) {
+      display1.innerHTML = "Not again! You stepped on a snake! Go down to position 16." ;
+      document.getElementById(pos1+"positionP1").innerHTML = '';
+      pos1 = 16;
+      box[pos1] = 'P1';
+      document.getElementById(pos1+"positionP1").innerHTML = box[pos1];
+
+    }
+
+     if (pos1 == 8) {
+      display1.innerHTML = "Nice. You stepped on a ladder! Move to position 15." ;
+      document.getElementById(pos1+"positionP1").innerHTML = '';
+      pos1 = 15;
+      box[pos1] = 'P1';
+      document.getElementById(pos1+"positionP1").innerHTML = box[pos1];
+
+    }
+
+     if (pos1 == 19) {
+      display1.innerHTML = "Good luck. You stepped on a ladder! Move to position 24." ;
+      document.getElementById(pos1+"positionP1").innerHTML = '';
+      pos1 = 24;
+      box[pos1] = 'P1';
+      document.getElementById(pos1+"positionP1").innerHTML = box[pos1];
+    }
+
+
+     }
+
+    }
+
+
+
+function player2(){
+
+
+
+       let rolldice = Math.floor(Math.random() * 6) + 1;
+
+       if (reset == 0) {
+         console.clear();
+         display2.innerHTML = " ";
+         display2.style.backgroundColor = '';
+         display1.innerHTML = " ";
+         display1.style.backgroundColor = '';
+         reset = 1;
+       }
+
+      if(pos2 === 0 && reset===1){
+       display2.textContent = 'Player 2 rolled ' + rolldice;
+       pos2 += rolldice;
+       box[pos2] = 'P2' ;
+
+       document.getElementById(pos2+"positionP2").innerHTML = box[pos2];
+
+     }
+
+     else{
+       display2.textContent = 'Player 2 rolled ' + rolldice;
+       document.getElementById(pos2+"positionP2").innerHTML = '';
+       pos2 += rolldice;
+
+       if(pos2>25){
+        pos2 -= 25;
+
+       }
+      box[pos2] = 'P2';
+      document.getElementById(pos2+"positionP2").innerHTML = box[pos2];
+
+
+
+     if(pos2 === 25){
+
+      display2.textContent = 'Congratulations! You win!';
+      display2.style.backgroundColor = 'green';
+      display1.textContent = 'Sorry! You lose!';
+      display1.style.backgroundColor = 'red';
+      pos2=0;
+      reset=0;
+    }
+
+    if (pos2 == 15) {
+     display2.textContent = "Yikes! You stepped on a snake! Go down to position 5." ;
+     document.getElementById(pos2+"positionP2").innerHTML = '';
+     pos2 = 5;
+     box[pos2] = 'P2';
+     document.getElementById(pos2+"positionP2").innerHTML = box[pos2];
+
+   }
+
+    if (pos2 == 23) {
+     display2.innerHTML = "Not again! You stepped on a snake! Go down to position 16." ;
+     document.getElementById(pos2+"positionP2").innerHTML = '';
+     pos2 = 16;
+     box[pos2] = 'P2';
+     document.getElementById(pos2+"positionP2").innerHTML = box[pos2];
+
+   }
+
+    if (pos2 == 8) {
+     display2.innerHTML = "Nice. You stepped on a ladder! Move to position 15." ;
+     document.getElementById(pos2+"positionP2").innerHTML = '';
+     pos2 = 15;
+     box[pos2] = 'P2';
+     document.getElementById(pos2+"positionP2").innerHTML = box[pos2];
+
+   }
+
+    if (pos2 == 19) {
+     display2.innerHTML = "Good luck. You stepped on a ladder! Move to position 24." ;
+     document.getElementById(pos2+"positionP2").innerHTML = '';
+     pos2 = 24;
+     box[pos2] = 'P2';
+     document.getElementById(pos2+"positionP2").innerHTML = box[pos2];
+   }
+
+
+
+     }
+
+    }
+     rollDice2.addEventListener('click', player2);
+
+
+
+</script>
+
 
 </html>
